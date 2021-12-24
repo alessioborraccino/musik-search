@@ -5,17 +5,20 @@
 
 
 import SwiftUI
-import ABNetworking
+import MusikNetworking
 
 final class DependencyManager {
     
     // Shared
-    private(set) lazy var apiClient: JsonApiClient = JsonApiClient()
-    private(set) lazy var musikRepository: MusikRepository = MusikRepository(client: apiClient)
+    private(set) lazy var musikRepository: MusikRepository = MusikRepository()
 
     // Interactors
-    private(set) lazy var artistSearchInteractor = ArtistSearchInteractor(repository: musikRepository)
-    private(set) lazy var artistViewInteractor = ArtistDetailInteractor(repository: musikRepository)
+    var artistSearchInteractor: ArtistSearchInteractor {
+        ArtistSearchInteractor(repository: musikRepository)
+    }
+    var artistViewInteractor: ArtistDetailInteractor {
+        ArtistDetailInteractor(repository: musikRepository)
+    }
 }
 
 struct DependencyManagerKey: EnvironmentKey {

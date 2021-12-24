@@ -6,7 +6,6 @@
 //
 
 import XCTest
-@testable import Musik
 
 class MusikTests: XCTestCase {
 
