@@ -42,7 +42,7 @@ final class ArtistDetailViewModel: ArtistDetailViewModelProtocol {
 private extension ArtistDetailViewModel {
 
     func loadArtist(with artistId: Int) {
-        viewState = .loading("Getting artist info")
+        viewState = .loading(String(localized: "Getting artist info"))
         Task { @MainActor in
             do {
                 let artist = try await interactor.fetch(artistId: artistId)
@@ -52,7 +52,7 @@ private extension ArtistDetailViewModel {
                 if error is CancellationError {
                     errorAlertState = .isNotPresented
                 } else {
-                    viewState = .error("Could not get artist info")
+                    viewState = .error(String(localized: "Could not get artist info"))
                     errorAlertState = .isPresented(with: error)
                 }
             }

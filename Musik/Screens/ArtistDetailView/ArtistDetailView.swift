@@ -25,7 +25,7 @@ struct ArtistDetailView<Model: ArtistDetailViewModelProtocol>: View {
                             .scaledToFit()
                         Spacer(minLength: 8)
                     }
-                    Text(uiModel.profile ?? "No info available")
+                    Text(uiModel.profile)
                     Spacer()
                 }
                 .padding()
@@ -38,9 +38,7 @@ struct ArtistDetailView<Model: ArtistDetailViewModelProtocol>: View {
             viewModel.perform(.load)
         }
         .alert(isPresented: $viewModel.errorAlertState.isPresented) {
-            Alert(title: Text("Error"),
-                  message: Text(viewModel.errorAlertState.errorText),
-                  dismissButton: .default(Text("Ok")))
+            Alert.simple(for: viewModel.errorAlertState.lastPresentedError)
         }
     }
 }

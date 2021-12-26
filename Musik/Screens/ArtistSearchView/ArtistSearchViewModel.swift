@@ -14,7 +14,8 @@ protocol ArtistSearchViewModelProtocol: ObservableObject {
     var errorAlertState: ErrorAlertState { get set }
     var searchText: String { get set }
     var textSuggestions: [String] { get }
-    
+    var searchPrompt: String { get }
+    var title: String { get }
     func perform(_ action: ArtistiSearchAction)
 }
 
@@ -35,6 +36,14 @@ extension ArtistSearchViewModel {
 
     private static var defaultSuggestions = ["Kylie Minogue", "Britney Spears"]
 
+    var title: String {
+        String(localized: "Artists DB")
+    }
+    
+    var searchPrompt: String {
+        String(localized: "Type an artist")
+    }
+    
     var textSuggestions: [String] {
         guard searchText.isEmpty else {
             return []
@@ -55,7 +64,7 @@ private extension ArtistSearchViewModel {
 
     func search() {
 
-        viewState = .loading("Getting results...")
+        viewState = .loading(String(localized:"Getting results..."))
         errorAlertState = .isNotPresented
 
         Task { @MainActor in
@@ -66,13 +75,13 @@ private extension ArtistSearchViewModel {
                 viewState = .empty("")
                 errorAlertState = .isNotPresented
             case .noResultsFound:
-                viewState = .empty("No results found")
+                viewState = .empty(String(localized:"No results found"))
                 errorAlertState = .isNotPresented
             case .success(let results):
                 viewState = .content(results.map { searchRowModel(from: $0) })
                 errorAlertState = .isNotPresented
             case .failureDueTo(let error):
-                viewState = .error("Something went wrong")
+                viewState = .error(String(localized:"Something went wrong"))
                 errorAlertState = .isPresented(with: error)
             case .failureDueToCancellation:
                 break

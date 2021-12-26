@@ -29,12 +29,9 @@ struct ArtistSearchView<Model: ArtistSearchViewModelProtocol>: View {
                 }
             }
             .alert(isPresented: $model.errorAlertState.isPresented) {
-                Alert(title: Text("Error"),
-                      message: Text(model.errorAlertState.lastPresentedError?.localizedDescription ?? ""),
-                      dismissButton: .default(Text("Ok")))
-
+                Alert.simple(for: model.errorAlertState.lastPresentedError)
             }
-            .navigationTitle("Artists DB")
+            .navigationTitle(model.title)
         }
     }
 }
@@ -56,7 +53,7 @@ private extension ArtistSearchView {
             }
         }
         .listStyle(.insetGrouped)
-        .searchable(text: $model.searchText, prompt: "Type an artist") {
+        .searchable(text: $model.searchText, prompt: model.searchPrompt) {
             ForEach(model.textSuggestions, id: \.self) { suggestion in
                 Text(suggestion)
                     .foregroundColor(.blue)

@@ -13,12 +13,12 @@ enum ArtistiViewAction {
 }
 
 struct ArtistUIModel {
-    let profile: String?
+    let profile: String
     let name: String?
     let mainImageUrl: String?
     
     init(artist: Artist) {
-        self.profile = artist.profile
+        self.profile = artist.profile ?? String(localized: "No info available")
         self.name = artist.name
         self.mainImageUrl = artist.images?.first(where: {$0.type == "primary" })?.url
     }
