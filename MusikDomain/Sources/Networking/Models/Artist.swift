@@ -12,6 +12,14 @@ public struct Artist: Codable, Identifiable, Equatable, Hashable {
     public let profile: String?
     public let urls: [String]?
     public let images: [APIImage]?
+
+    init(id: Int, name: String, profile: String? = nil, urls: [String]? = [], images: [APIImage]? = []) {
+        self.id = id
+        self.name = name
+        self.profile = profile
+        self.urls = urls
+        self.images = images
+    }
 }
 
 public struct APIImage: Codable, Equatable, Hashable {
@@ -27,5 +35,12 @@ public struct APIImage: Codable, Equatable, Hashable {
     public let width: Double
     public let url: String
     public let type: String
+
+    init(height: Double, width: Double, url: String, type: String) {
+        self.height = height
+        self.width = width
+        self.url = url
+        self.type = type
+    }
 }
 

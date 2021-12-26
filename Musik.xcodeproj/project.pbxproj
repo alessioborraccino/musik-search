@@ -25,6 +25,7 @@
 		EA07A3B42774C047001444DA /* MusikNetworking in Frameworks */ = {isa = PBXBuildFile; productRef = EA07A3B32774C047001444DA /* MusikNetworking */; };
 		EA07A3B62774C2AF001444DA /* MusikCommonUI in Frameworks */ = {isa = PBXBuildFile; productRef = EA07A3B52774C2AF001444DA /* MusikCommonUI */; };
 		EA1A310727760CAA00A98556 /* ArtistSearchState.swift in Sources */ = {isa = PBXBuildFile; fileRef = EA1A310627760CAA00A98556 /* ArtistSearchState.swift */; };
+		EA9FAB992778EB6300C7CCBE /* Localizable.strings in Resources */ = {isa = PBXBuildFile; fileRef = EA9FAB972778EB6300C7CCBE /* Localizable.strings */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -65,6 +66,7 @@
 		36B19A9F2742B071001724D4 /* ArtistDetailState.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ArtistDetailState.swift; sourceTree = "<group>"; };
 		EA07A3B12774C011001444DA /* MusikDomain */ = {isa = PBXFileReference; lastKnownFileType = wrapper; path = MusikDomain; sourceTree = "<group>"; };
 		EA1A310627760CAA00A98556 /* ArtistSearchState.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ArtistSearchState.swift; sourceTree = "<group>"; };
+		EA9FAB982778EB6300C7CCBE /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/Localizable.strings; sourceTree = "<group>"; };
 		EAFE30DE276242110039743C /* Musik.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = Musik.entitlements; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -98,6 +100,7 @@
 		361207BE270B499B0009224E = {
 			isa = PBXGroup;
 			children = (
+				EA9FAB972778EB6300C7CCBE /* Localizable.strings */,
 				361207C9270B499B0009224E /* Musik */,
 				361207DA270B499E0009224E /* MusikTests */,
 				361207E4270B499E0009224E /* MusikUITests */,
@@ -321,6 +324,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				361207CF270B499E0009224E /* Assets.xcassets in Resources */,
+				EA9FAB992778EB6300C7CCBE /* Localizable.strings in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -391,6 +395,17 @@
 			targetProxy = 361207E2270B499E0009224E /* PBXContainerItemProxy */;
 		};
 /* End PBXTargetDependency section */
+
+/* Begin PBXVariantGroup section */
+		EA9FAB972778EB6300C7CCBE /* Localizable.strings */ = {
+			isa = PBXVariantGroup;
+			children = (
+				EA9FAB982778EB6300C7CCBE /* en */,
+			);
+			name = Localizable.strings;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
 
 /* Begin XCBuildConfiguration section */
 		361207E9270B499E0009224E /* Debug */ = {

@@ -7,6 +7,8 @@
 import Foundation
 import SwiftUI
 
+@available(macOS 12.0, *)
+@available(iOS 15, *)
 public struct URLImageView: View {
 
     private var url: URL?
@@ -37,6 +39,8 @@ public struct URLImageView: View {
     }
 }
 
+@available(macOS 12.0, *)
+@available(iOS 15, *)
 extension URLImageView {
     private var loadingView: some View {
         ProgressView()
@@ -44,7 +48,7 @@ extension URLImageView {
 
     private var placeholderView: some View {
         if let placeholderImageName = placeholderImageName {
-            return Image(uiImage: UIImage(named: placeholderImageName)!)
+            return Image(placeholderImageName)
                 .resizable()
         } else {
             return Image(decorative: "Empty")
