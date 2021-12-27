@@ -28,11 +28,15 @@ extension Stubber {
         let responseGetArtist: StubResponse
         
         if isSuccessful {
+            let apiImage = APIImage(height: 30,
+                                    width: 30,
+                                    url: "url",
+                                    type: "type")
             let artist = Artist(id: identifier,
                                 name: "name",
                                 profile: "profile",
                                 urls: [],
-                                images: [])
+                                images: [apiImage])
             
             let artistData = try JSONEncoder().encode(artist)
             responseGetArtist =

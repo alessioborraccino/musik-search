@@ -34,6 +34,10 @@ extension MusikRepositoryTests {
         XCTAssertEqual(artist.name, "name")
         XCTAssertEqual(artist.id,  MusikRepositoryTests.identifier)
         XCTAssertEqual(artist.profile, "profile")
+        XCTAssertEqual(artist.images?.first?.url, "url")
+        XCTAssertEqual(artist.images?.first?.type, "type")
+        XCTAssertEqual(artist.images?.first?.height, 30)
+        XCTAssertEqual(artist.images?.first?.width, 30)
     }
 
     func testSearchSuccessful() async throws {
@@ -71,6 +75,33 @@ extension MusikRepositoryTests {
                 XCTFail()
                 return
             }
+        }
+    }
+
+    func testGetArtistCancel() async throws {
+        try Stubber.default.stubGetArtist(identifier: MusikRepositoryTests.identifier, isSuccessful: false)
+        do {
+            let handle = Task {
+                try await musikRepository.getArtist(id: MusikRepositoryTests.identifier)
+            }
+            handle.cancel()
+            _ = try await handle.value
+        } catch {
+            XCTAssert(error is CancellationError)
+
+        }
+    }
+
+    func testSearchCancel() async throws {
+        try Stubber.default.stubSearchQuery(MusikRepositoryTests.searchQuery, isSuccessful: false)
+        do {
+            let handle = Task {
+                try await musikRepository.search(query: MusikRepositoryTests.searchQuery)
+            }
+            handle.cancel()
+            _ = try await handle.value
+        } catch {
+            XCTAssert(error is CancellationError)
         }
     }
 }

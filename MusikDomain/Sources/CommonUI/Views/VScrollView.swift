@@ -1,8 +1,7 @@
 //
-//  File.swift
+//  VScrollView
 //  
 //
-//  Created by Alessio Borraccino on 24.12.21.
 //
 
 import SwiftUI

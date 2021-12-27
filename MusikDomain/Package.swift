@@ -33,6 +33,9 @@ let package = Package(
         .target(
             name: "MusikCommonUI",
             dependencies: [],
-            path: "Sources/CommonUI")
+            path: "Sources/CommonUI"),
+        .testTarget(name: "MusikCommonUITests",
+                    dependencies: ["MusikCommonUI"],
+                    path: "Tests/CommonUI"),
     ]
 )

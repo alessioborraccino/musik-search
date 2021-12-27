@@ -1,8 +1,7 @@
 //
-//  File.swift
+//  Alert+Factory.swift
 //  
 //
-//  Created by Alessio Borraccino on 25.12.21.
 //
 
 import Foundation
