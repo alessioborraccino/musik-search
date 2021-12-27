@@ -11,6 +11,12 @@ protocol ArtistDetailInteractorProtocol {
     func fetch(artistId: Int) async throws -> Artist
 }
 
+struct ArtistDetailInteractorFactory {
+    static var live: ArtistDetailInteractorProtocol {
+        ArtistDetailInteractor(repository: MusikRepository())
+    }
+}
+
 final class ArtistDetailInteractor: ArtistDetailInteractorProtocol {
     private var repository: MusikRepository
     private var currentTask: Task<Artist, Error>?
@@ -18,9 +24,6 @@ final class ArtistDetailInteractor: ArtistDetailInteractorProtocol {
     init(repository: MusikRepository = MusikRepository()) {
         self.repository = repository
     }
-}
-
-extension ArtistDetailInteractor {
 
     func fetch(artistId: Int) async throws -> Artist {
         currentTask?.cancel()

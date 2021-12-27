@@ -11,8 +11,6 @@
 		361207CD270B499B0009224E /* ArtistSearchView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 361207CC270B499B0009224E /* ArtistSearchView.swift */; };
 		361207CF270B499E0009224E /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 361207CE270B499E0009224E /* Assets.xcassets */; };
 		361207DC270B499E0009224E /* MusikTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 361207DB270B499E0009224E /* MusikTests.swift */; };
-		361207E6270B499E0009224E /* MusikUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 361207E5270B499E0009224E /* MusikUITests.swift */; };
-		361207E8270B499E0009224E /* MusikUITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 361207E7270B499E0009224E /* MusikUITestsLaunchTests.swift */; };
 		36120802270DAE6C0009224E /* ArtistSearchViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 36120801270DAE6C0009224E /* ArtistSearchViewModel.swift */; };
 		36120805270DCBE10009224E /* DependencyManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 36120804270DCBE10009224E /* DependencyManager.swift */; };
 		3612080C270DE02B0009224E /* ArtistSearchRowView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3612080B270DE02B0009224E /* ArtistSearchRowView.swift */; };
@@ -26,17 +24,13 @@
 		EA07A3B62774C2AF001444DA /* MusikCommonUI in Frameworks */ = {isa = PBXBuildFile; productRef = EA07A3B52774C2AF001444DA /* MusikCommonUI */; };
 		EA1A310727760CAA00A98556 /* ArtistSearchState.swift in Sources */ = {isa = PBXBuildFile; fileRef = EA1A310627760CAA00A98556 /* ArtistSearchState.swift */; };
 		EA9FAB992778EB6300C7CCBE /* Localizable.strings in Resources */ = {isa = PBXBuildFile; fileRef = EA9FAB972778EB6300C7CCBE /* Localizable.strings */; };
+		EA9FAB9C277A25BC00C7CCBE /* SnapshotTesting in Frameworks */ = {isa = PBXBuildFile; productRef = EA9FAB9B277A25BC00C7CCBE /* SnapshotTesting */; };
+		EA9FAB9E277A29D600C7CCBE /* ArtistDetailInteractorMock.swift in Sources */ = {isa = PBXBuildFile; fileRef = EA9FAB9D277A29D600C7CCBE /* ArtistDetailInteractorMock.swift */; };
+		EA9FABA0277A2DAF00C7CCBE /* ArtistSearchInteractorMock.swift in Sources */ = {isa = PBXBuildFile; fileRef = EA9FAB9F277A2DAF00C7CCBE /* ArtistSearchInteractorMock.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
 		361207D8270B499E0009224E /* PBXContainerItemProxy */ = {
-			isa = PBXContainerItemProxy;
-			containerPortal = 361207BF270B499B0009224E /* Project object */;
-			proxyType = 1;
-			remoteGlobalIDString = 361207C6270B499B0009224E;
-			remoteInfo = Musik;
-		};
-		361207E2270B499E0009224E /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
 			containerPortal = 361207BF270B499B0009224E /* Project object */;
 			proxyType = 1;
@@ -52,9 +46,6 @@
 		361207CE270B499E0009224E /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		361207D7270B499E0009224E /* MusikTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = MusikTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		361207DB270B499E0009224E /* MusikTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MusikTests.swift; sourceTree = "<group>"; };
-		361207E1270B499E0009224E /* MusikUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = MusikUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
-		361207E5270B499E0009224E /* MusikUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MusikUITests.swift; sourceTree = "<group>"; };
-		361207E7270B499E0009224E /* MusikUITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MusikUITestsLaunchTests.swift; sourceTree = "<group>"; };
 		36120801270DAE6C0009224E /* ArtistSearchViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ArtistSearchViewModel.swift; sourceTree = "<group>"; };
 		36120804270DCBE10009224E /* DependencyManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DependencyManager.swift; sourceTree = "<group>"; };
 		3612080B270DE02B0009224E /* ArtistSearchRowView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ArtistSearchRowView.swift; sourceTree = "<group>"; };
@@ -67,6 +58,8 @@
 		EA07A3B12774C011001444DA /* MusikDomain */ = {isa = PBXFileReference; lastKnownFileType = wrapper; path = MusikDomain; sourceTree = "<group>"; };
 		EA1A310627760CAA00A98556 /* ArtistSearchState.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ArtistSearchState.swift; sourceTree = "<group>"; };
 		EA9FAB982778EB6300C7CCBE /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/Localizable.strings; sourceTree = "<group>"; };
+		EA9FAB9D277A29D600C7CCBE /* ArtistDetailInteractorMock.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ArtistDetailInteractorMock.swift; sourceTree = "<group>"; };
+		EA9FAB9F277A2DAF00C7CCBE /* ArtistSearchInteractorMock.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ArtistSearchInteractorMock.swift; sourceTree = "<group>"; };
 		EAFE30DE276242110039743C /* Musik.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = Musik.entitlements; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -84,13 +77,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
-		361207DE270B499E0009224E /* Frameworks */ = {
-			isa = PBXFrameworksBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
+				EA9FAB9C277A25BC00C7CCBE /* SnapshotTesting in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -103,7 +90,6 @@
 				EA9FAB972778EB6300C7CCBE /* Localizable.strings */,
 				361207C9270B499B0009224E /* Musik */,
 				361207DA270B499E0009224E /* MusikTests */,
-				361207E4270B499E0009224E /* MusikUITests */,
 				EA07A3B02774C011001444DA /* MusikPackages */,
 				361207C8270B499B0009224E /* Products */,
 				EA07A3B22774C047001444DA /* Frameworks */,
@@ -115,7 +101,6 @@
 			children = (
 				361207C7270B499B0009224E /* Music Search.app */,
 				361207D7270B499E0009224E /* MusikTests.xctest */,
-				361207E1270B499E0009224E /* MusikUITests.xctest */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -136,17 +121,10 @@
 			isa = PBXGroup;
 			children = (
 				361207DB270B499E0009224E /* MusikTests.swift */,
+				EA9FAB9D277A29D600C7CCBE /* ArtistDetailInteractorMock.swift */,
+				EA9FAB9F277A2DAF00C7CCBE /* ArtistSearchInteractorMock.swift */,
 			);
 			path = MusikTests;
-			sourceTree = "<group>";
-		};
-		361207E4270B499E0009224E /* MusikUITests */ = {
-			isa = PBXGroup;
-			children = (
-				361207E5270B499E0009224E /* MusikUITests.swift */,
-				361207E7270B499E0009224E /* MusikUITestsLaunchTests.swift */,
-			);
-			path = MusikUITests;
 			sourceTree = "<group>";
 		};
 		361207FF270DAE4C0009224E /* Screens */ = {
@@ -251,27 +229,12 @@
 				361207D9270B499E0009224E /* PBXTargetDependency */,
 			);
 			name = MusikTests;
+			packageProductDependencies = (
+				EA9FAB9B277A25BC00C7CCBE /* SnapshotTesting */,
+			);
 			productName = MusikTests;
 			productReference = 361207D7270B499E0009224E /* MusikTests.xctest */;
 			productType = "com.apple.product-type.bundle.unit-test";
-		};
-		361207E0270B499E0009224E /* MusikUITests */ = {
-			isa = PBXNativeTarget;
-			buildConfigurationList = 361207F1270B499E0009224E /* Build configuration list for PBXNativeTarget "MusikUITests" */;
-			buildPhases = (
-				361207DD270B499E0009224E /* Sources */,
-				361207DE270B499E0009224E /* Frameworks */,
-				361207DF270B499E0009224E /* Resources */,
-			);
-			buildRules = (
-			);
-			dependencies = (
-				361207E3270B499E0009224E /* PBXTargetDependency */,
-			);
-			name = MusikUITests;
-			productName = MusikUITests;
-			productReference = 361207E1270B499E0009224E /* MusikUITests.xctest */;
-			productType = "com.apple.product-type.bundle.ui-testing";
 		};
 /* End PBXNativeTarget section */
 
@@ -290,10 +253,6 @@
 						CreatedOnToolsVersion = 13.0;
 						TestTargetID = 361207C6270B499B0009224E;
 					};
-					361207E0270B499E0009224E = {
-						CreatedOnToolsVersion = 13.0;
-						TestTargetID = 361207C6270B499B0009224E;
-					};
 				};
 			};
 			buildConfigurationList = 361207C2270B499B0009224E /* Build configuration list for PBXProject "Musik" */;
@@ -306,6 +265,7 @@
 			);
 			mainGroup = 361207BE270B499B0009224E;
 			packageReferences = (
+				EA9FAB9A277A25BC00C7CCBE /* XCRemoteSwiftPackageReference "swift-snapshot-testing" */,
 			);
 			productRefGroup = 361207C8270B499B0009224E /* Products */;
 			projectDirPath = "";
@@ -313,7 +273,6 @@
 			targets = (
 				361207C6270B499B0009224E /* Musik */,
 				361207D6270B499E0009224E /* MusikTests */,
-				361207E0270B499E0009224E /* MusikUITests */,
 			);
 		};
 /* End PBXProject section */
@@ -329,13 +288,6 @@
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 		361207D5270B499E0009224E /* Resources */ = {
-			isa = PBXResourcesBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
-		361207DF270B499E0009224E /* Resources */ = {
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
@@ -368,16 +320,9 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				EA9FAB9E277A29D600C7CCBE /* ArtistDetailInteractorMock.swift in Sources */,
+				EA9FABA0277A2DAF00C7CCBE /* ArtistSearchInteractorMock.swift in Sources */,
 				361207DC270B499E0009224E /* MusikTests.swift in Sources */,
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
-		361207DD270B499E0009224E /* Sources */ = {
-			isa = PBXSourcesBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-				361207E8270B499E0009224E /* MusikUITestsLaunchTests.swift in Sources */,
-				361207E6270B499E0009224E /* MusikUITests.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -388,11 +333,6 @@
 			isa = PBXTargetDependency;
 			target = 361207C6270B499B0009224E /* Musik */;
 			targetProxy = 361207D8270B499E0009224E /* PBXContainerItemProxy */;
-		};
-		361207E3270B499E0009224E /* PBXTargetDependency */ = {
-			isa = PBXTargetDependency;
-			target = 361207C6270B499B0009224E /* Musik */;
-			targetProxy = 361207E2270B499E0009224E /* PBXContainerItemProxy */;
 		};
 /* End PBXTargetDependency section */
 
@@ -599,7 +539,7 @@
 				BUNDLE_LOADER = "$(TEST_HOST)";
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
-				DEVELOPMENT_TEAM = V3GSB79Q6A;
+				DEVELOPMENT_TEAM = 2HTJ99BR7X;
 				GENERATE_INFOPLIST_FILE = YES;
 				IPHONEOS_DEPLOYMENT_TARGET = 15.0;
 				LD_RUNPATH_SEARCH_PATHS = (
@@ -624,7 +564,7 @@
 				BUNDLE_LOADER = "$(TEST_HOST)";
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
-				DEVELOPMENT_TEAM = V3GSB79Q6A;
+				DEVELOPMENT_TEAM = 2HTJ99BR7X;
 				GENERATE_INFOPLIST_FILE = YES;
 				IPHONEOS_DEPLOYMENT_TARGET = 15.0;
 				LD_RUNPATH_SEARCH_PATHS = (
@@ -639,52 +579,6 @@
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/Music Search.app/Music Search";
-			};
-			name = Release;
-		};
-		361207F2270B499E0009224E /* Debug */ = {
-			isa = XCBuildConfiguration;
-			buildSettings = {
-				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
-				CODE_SIGN_STYLE = Automatic;
-				CURRENT_PROJECT_VERSION = 1;
-				DEVELOPMENT_TEAM = V3GSB79Q6A;
-				GENERATE_INFOPLIST_FILE = YES;
-				LD_RUNPATH_SEARCH_PATHS = (
-					"$(inherited)",
-					"@executable_path/Frameworks",
-					"@loader_path/Frameworks",
-				);
-				MARKETING_VERSION = 1.0;
-				PRODUCT_BUNDLE_IDENTIFIER = com.borraccino.MusikUITests;
-				PRODUCT_NAME = "$(TARGET_NAME)";
-				SWIFT_EMIT_LOC_STRINGS = NO;
-				SWIFT_VERSION = 5.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
-				TEST_TARGET_NAME = Musik;
-			};
-			name = Debug;
-		};
-		361207F3270B499E0009224E /* Release */ = {
-			isa = XCBuildConfiguration;
-			buildSettings = {
-				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
-				CODE_SIGN_STYLE = Automatic;
-				CURRENT_PROJECT_VERSION = 1;
-				DEVELOPMENT_TEAM = V3GSB79Q6A;
-				GENERATE_INFOPLIST_FILE = YES;
-				LD_RUNPATH_SEARCH_PATHS = (
-					"$(inherited)",
-					"@executable_path/Frameworks",
-					"@loader_path/Frameworks",
-				);
-				MARKETING_VERSION = 1.0;
-				PRODUCT_BUNDLE_IDENTIFIER = com.borraccino.MusikUITests;
-				PRODUCT_NAME = "$(TARGET_NAME)";
-				SWIFT_EMIT_LOC_STRINGS = NO;
-				SWIFT_VERSION = 5.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
-				TEST_TARGET_NAME = Musik;
 			};
 			name = Release;
 		};
@@ -718,16 +612,18 @@
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		361207F1270B499E0009224E /* Build configuration list for PBXNativeTarget "MusikUITests" */ = {
-			isa = XCConfigurationList;
-			buildConfigurations = (
-				361207F2270B499E0009224E /* Debug */,
-				361207F3270B499E0009224E /* Release */,
-			);
-			defaultConfigurationIsVisible = 0;
-			defaultConfigurationName = Release;
-		};
 /* End XCConfigurationList section */
+
+/* Begin XCRemoteSwiftPackageReference section */
+		EA9FAB9A277A25BC00C7CCBE /* XCRemoteSwiftPackageReference "swift-snapshot-testing" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/pointfreeco/swift-snapshot-testing";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 1.0.0;
+			};
+		};
+/* End XCRemoteSwiftPackageReference section */
 
 /* Begin XCSwiftPackageProductDependency section */
 		EA07A3B32774C047001444DA /* MusikNetworking */ = {
@@ -737,6 +633,11 @@
 		EA07A3B52774C2AF001444DA /* MusikCommonUI */ = {
 			isa = XCSwiftPackageProductDependency;
 			productName = MusikCommonUI;
+		};
+		EA9FAB9B277A25BC00C7CCBE /* SnapshotTesting */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = EA9FAB9A277A25BC00C7CCBE /* XCRemoteSwiftPackageReference "swift-snapshot-testing" */;
+			productName = SnapshotTesting;
 		};
 /* End XCSwiftPackageProductDependency section */
 	};

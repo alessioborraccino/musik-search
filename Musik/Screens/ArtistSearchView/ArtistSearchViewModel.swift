@@ -16,6 +16,7 @@ protocol ArtistSearchViewModelProtocol: ObservableObject {
     var textSuggestions: [String] { get }
     var searchPrompt: String { get }
     var title: String { get }
+
     func perform(_ action: ArtistiSearchAction)
 }
 

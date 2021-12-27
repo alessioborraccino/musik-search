@@ -12,11 +12,11 @@ final class DependencyManager {
     private(set) lazy var musikRepository: MusikRepository = MusikRepository()
 
     // Interactors
-    var artistSearchInteractor: ArtistSearchInteractor {
-        ArtistSearchInteractor(repository: musikRepository)
+    var artistSearchInteractor: ArtistSearchInteractorProtocol {
+        ArtistSearchInteractorFactory.live
     }
-    var artistViewInteractor: ArtistDetailInteractor {
-        ArtistDetailInteractor(repository: musikRepository)
+    var artistViewInteractor: ArtistDetailInteractorProtocol {
+        ArtistDetailInteractorFactory.live
     }
 }
 

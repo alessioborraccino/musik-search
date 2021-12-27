@@ -6,6 +6,8 @@
 //
 
 import XCTest
+import SnapshotTesting
+@testable import Music_Search
 
 class MusikTests: XCTestCase {
 
@@ -17,16 +19,19 @@ class MusikTests: XCTestCase {
         // Put teardown code here. This method is called after the invocation of each test method in the class.
     }
 
-    func testExample() throws {
-        // This is an example of a functional test case.
-        // Use XCTAssert and related functions to verify your tests produce the correct results.
+    func testDetailStartingAppearance() {
+        let interactor = ArtistDetailInteractorFactory.mock
+        let model = ArtistDetailViewModel(interactor: interactor,
+                                          artistId: 1,
+                                          artistName: "Kylie")
+        let artistDetailView = ArtistDetailView(viewModel: model)
+        assertSnapshot(matching: artistDetailView, as: .image)
     }
 
-    func testPerformanceExample() throws {
-        // This is an example of a performance test case.
-        self.measure {
-            // Put the code you want to measure the time of here.
-        }
+    func testSearchStartingAppearance() {
+        let interactor = ArtistSearchInteractorFactory.mock
+        let model = ArtistSearchViewModel(interactor: interactor)
+        let artistSearchView = ArtistSearchView(model: model)
+        assertSnapshot(matching: artistSearchView, as: .image)
     }
-
 }

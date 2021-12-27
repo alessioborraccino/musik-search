@@ -2,7 +2,6 @@
 //  ArtistSearchRowViewModel.swift
 //  Musik
 //
-//  Created by Alessio Borraccino on 12.11.21.
 //
 
 import SwiftUI

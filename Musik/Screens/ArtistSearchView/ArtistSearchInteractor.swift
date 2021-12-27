@@ -11,6 +11,12 @@ protocol ArtistSearchInteractorProtocol {
     func search(for searchText: String) async throws -> ArtistSearchResult
 }
 
+struct ArtistSearchInteractorFactory {
+    static var live: ArtistSearchInteractorProtocol {
+        ArtistSearchInteractor(repository: MusikRepository())
+    }
+}
+
 final class ArtistSearchInteractor: ArtistSearchInteractorProtocol {
     
     private var repository: MusikRepository
