@@ -14,8 +14,8 @@ struct MusikApp: App {
 
     var body: some Scene {
         WindowGroup {
-            let model = ArtistSearchViewModel(interactor: dependencyManager.artistSearchInteractor)
-            ArtistSearchView(model: model)
+            let viewModel = ArtistSearchViewModel(interactor: dependencyManager.artistSearchInteractor)
+            ArtistSearchView(viewModel: viewModel)
         }
     }
 }

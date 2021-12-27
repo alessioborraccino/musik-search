@@ -8,16 +8,16 @@
 import SwiftUI
 import MusikCommonUI
 
-struct ArtistSearchView<Model: ArtistSearchViewModelProtocol>: View {
+struct ArtistSearchView<ViewModel: ArtistSearchViewModelProtocol>: View {
 
     @Environment(\.dependencyManager) private var dependencyManager: DependencyManager
-    @StateObject var model: Model
+    @StateObject var viewModel: ViewModel
 
     var body: some View {
         NavigationView {
             ZStack {
-                searchableListView(model: model)
-                switch model.viewState {
+                searchableListView(viewModel: viewModel)
+                switch viewModel.viewState {
                 case .content(_):
                     EmptyView()
                 case .empty(let message):
@@ -28,19 +28,19 @@ struct ArtistSearchView<Model: ArtistSearchViewModelProtocol>: View {
                     Text(message)
                 }
             }
-            .alert(isPresented: $model.errorAlertState.isPresented) {
-                Alert.simple(for: model.errorAlertState.lastPresentedError)
+            .alert(isPresented: $viewModel.errorAlertState.isPresented) {
+                Alert.simple(for: viewModel.errorAlertState.lastPresentedError)
             }
-            .navigationTitle(model.title)
+            .navigationTitle(viewModel.title)
         }
     }
 }
 
 private extension ArtistSearchView {
 
-    func searchableListView(model: Model) -> some View {
+    func searchableListView(viewModel: ViewModel) -> some View {
         List {
-            if let searchResults = model.viewState.viewModel {
+            if let searchResults = viewModel.viewState.viewModel {
                 ForEach(searchResults, id: \.id) { rowModel in
                     let viewModel = ArtistDetailViewModel(interactor: dependencyManager.artistViewInteractor,
                                                           artistId: rowModel.id,
@@ -53,18 +53,18 @@ private extension ArtistSearchView {
             }
         }
         .listStyle(.insetGrouped)
-        .searchable(text: $model.searchText, prompt: model.searchPrompt) {
-            ForEach(model.textSuggestions, id: \.self) { suggestion in
+        .searchable(text: $viewModel.searchText, prompt: viewModel.searchPrompt) {
+            ForEach(viewModel.textSuggestions, id: \.self) { suggestion in
                 Text(suggestion)
                     .foregroundColor(.blue)
                     .searchCompletion(suggestion)
             }
         }
-        .onChange(of: model.searchText) { _ in
-            model.perform(.search)
+        .onChange(of: viewModel.searchText) { _ in
+            viewModel.perform(.search)
         }
         .onSubmit(of: .search) {
-            model.perform(.search)
+            viewModel.perform(.search)
         }
     }
 }
@@ -72,6 +72,6 @@ private extension ArtistSearchView {
 struct ArtistSearchView_Previews: PreviewProvider {
     static var previews: some View {
         let model = ArtistSearchViewModel(interactor: ArtistSearchInteractor())
-        ArtistSearchView(model: model)
+        ArtistSearchView(viewModel: model)
     }
 }

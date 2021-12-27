@@ -31,7 +31,7 @@ class MusikTests: XCTestCase {
     func testSearchStartingAppearance() {
         let interactor = ArtistSearchInteractorFactory.mock
         let model = ArtistSearchViewModel(interactor: interactor)
-        let artistSearchView = ArtistSearchView(model: model)
+        let artistSearchView = ArtistSearchView(viewModel: model)
         assertSnapshot(matching: artistSearchView, as: .image)
     }
 }
